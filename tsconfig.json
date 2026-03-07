@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    // ── Target & Module ─────────────────────────────────────────────────────
+    "target": "ES2020",          // Compile to ES2020 JavaScript
+    "module": "commonjs",        // Use CommonJS modules (Node.js compatible)
+    "lib": ["ES2020", "DOM"],    // Include ES2020 + DOM typings (DOM adds console, window, etc.)
+
+    // ── Output ──────────────────────────────────────────────────────────────
+    "outDir": "./dist",          // Compiled JS files go into the /dist folder
+    "rootDir": "./",             // Source root is the current directory
+
+    // ── Strict Type Checking (VERY IMPORTANT for learning) ───────────────────
+    "strict": true,              // Enable ALL strict type-checking options
+    "noImplicitAny": true,       // Error when a variable has implicit 'any' type
+    "strictNullChecks": true,    // null and undefined are separate types
+    "strictFunctionTypes": true, // Strict checking for function types
+    "strictPropertyInitialization": true, // Class properties must be initialized
+
+    // ── Decorators (needed for Day-13) ──────────────────────────────────────
+    "experimentalDecorators": true,  // Enable experimental decorator syntax
+    "emitDecoratorMetadata": true,   // Emit metadata for decorators
+
+    // ── Module Resolution ───────────────────────────────────────────────────
+    "moduleResolution": "node",  // Node.js module resolution
+    "ignoreDeprecations": "6.0", // Suppress deprecation warnings for moduleResolution:node
+    "esModuleInterop": true,     // Allow default imports from CommonJS modules
+    "allowSyntheticDefaultImports": true, // Allow default imports without * as
+
+    // ── Source Maps ─────────────────────────────────────────────────────────
+    "sourceMap": true,           // Generate .map files for debugging
+
+    // ── Other Checks ────────────────────────────────────────────────────────
+    // "noUnusedLocals": true,   // Disabled: learning files use demo variables intentionally
+    // "noUnusedParameters": true,// Disabled: learning files use demo params intentionally
+    "noImplicitReturns": true,   // Error if not all code paths return a value
+    "noFallthroughCasesInSwitch": true, // Error on fallthrough in switch
+
+    // ── Skip type checking for declaration files ─────────────────────────────
+    "skipLibCheck": true,        // Skip type checking of .d.ts declaration files
+    "forceConsistentCasingInFileNames": true // Enforce consistent file casing
+  },
+  "include": [
+    "./**/*.ts"                  // Include all .ts files in the project
+  ],
+  "exclude": [
+    "node_modules",              // Ignore node_modules
+    "dist"                       // Ignore compiled output
+  ]
+}
